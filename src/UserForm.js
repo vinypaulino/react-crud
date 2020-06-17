@@ -92,13 +92,15 @@ class UserForm extends Component {
         >
           {({ isSubmitting }) => (
             <Form>
-              <Field type="email" name="email" />
-              <span style={{ color: "red", fontWeight: "bold" }}>
-                <ErrorMessage name="email" component="div" />
-              </span>
+              <label htmlFor="username">user name</label>
               <Field type="username" name="username" />
               <span style={{ color: "red", fontWeight: "bold" }}>
                 <ErrorMessage name="username" component="div" />
+              </span>
+              <label htmlFor="email">e-mail</label>
+              <Field type="email" name="email" />
+              <span style={{ color: "red", fontWeight: "bold" }}>
+                <ErrorMessage name="email" component="div" />
               </span>
               <button type="submit" disabled={isSubmitting}>
                 Submit
