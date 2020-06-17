@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import * as firebase from "firebase";
-import Users from "./Users";
+import User from "./User";
+import UserForm from "./UserForm";
 import NotFound from "./NotFound";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
@@ -16,7 +17,8 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Switch>
-              <Route exact path="/" component={Users} />
+              <Route path="/add" component={UserForm} />
+              <Route exact path="/" component={User} />
               <Route path="/*" component={NotFound} />
             </Switch>
           </div>
